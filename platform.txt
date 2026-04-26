@@ -141,3 +141,33 @@ tools.burntool_py.bootloader.protocol=serial
 tools.burntool_py.bootloader.params.verbose=
 tools.burntool_py.bootloader.params.quiet=
 tools.burntool_py.bootloader.pattern=
+
+## uploadtool_py
+
+tools.uploadtool_py.path={runtime.tools.uploadtool_py.path}
+tools.uploadtool_py.cmd=uploadtool.py
+tools.uploadtool_py.cmd.linux=uploadtool.py
+tools.uploadtool_py.cmd.windows=uploadtool.py
+
+tools.uploadtool_py.upload.protocol=network
+tools.uploadtool_py.upload.params.verbose=
+tools.uploadtool_py.upload.params.quiet=
+tools.uploadtool_py.upload.params.quiet=
+tools.uploadtool_py.upload.pattern=python3 "{path}/{cmd}" "{serial.port}" "{build.path}/{build.project_name}.elf"
+tools.uploadtool_py.upload.pattern.windows=python "{path}/{cmd}" "{serial.port}" "{build.path}/{build.project_name}.elf"
+
+tools.uploadtool_py.program.params.verbose=
+tools.uploadtool_py.program.params.quiet=
+tools.uploadtool_py.program.pattern_args=
+tools.uploadtool_py.program.pattern=
+
+tools.uploadtool_py.erase.protocol=serial
+tools.uploadtool_py.erase.params.verbose=
+tools.uploadtool_py.erase.params.quiet=
+tools.uploadtool_py.erase.pattern_args=
+tools.uploadtool_py.erase.pattern=
+
+tools.uploadtool_py.bootloader.protocol=serial
+tools.uploadtool_py.bootloader.params.verbose=
+tools.uploadtool_py.bootloader.params.quiet=
+tools.uploadtool_py.bootloader.pattern=

@@ -6,7 +6,9 @@ duo.name=Duo Dev Module
 duo.vid.0=0x3346
 duo.pid.0=0x1009
 
+duo.upload.protocol=network
 duo.upload.tool=burntool_py
+duo.upload.tool.network=uploadtool_py
 duo.upload.tool.default=burntool_py
 
 duo.upload.flags=
@@ -40,7 +42,9 @@ duo256.name=Duo256 Dev Module
 duo256.vid.0=0x3346
 duo256.pid.0=0x1009
 
+duo256.upload.protocol=network
 duo256.upload.tool=burntool_py
+duo256.upload.tool.network=uploadtool_py
 duo256.upload.tool.default=burntool_py
 
 duo256.upload.flags=
@@ -74,7 +78,9 @@ duos.name=DuoS Dev Module
 duos.vid.0=0x3346
 duos.pid.0=0x1009
 
+duos.upload.protocol=network
 duos.upload.tool=burntool_py
+duos.upload.tool.network=uploadtool_py
 duos.upload.tool.default=burntool_py
 
 duos.upload.flags=

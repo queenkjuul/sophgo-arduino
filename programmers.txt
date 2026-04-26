@@ -6,3 +6,12 @@ burntool.program.tool=burntool_py
 burntool.program.tool.default=burntool_py
 burntool.program.extra_params=
 burntool.extra_params=
+
+uploadtool.name=Uploadtool
+uploadtool.communication=network
+uploadtool.protocol=network
+uploadtool.program.protocol=network
+uploadtool.program.tool=uploadtool_py
+uploadtool.program.tool.default=uploadtool_py
+uploadtool.program.extra_params=
+uploadtool.extra_params=
