@@ -278,7 +278,7 @@ else
 	UPDATED_JSON="$(cat "$INDEX_JSON_FILE")"
 	ARDUINO_VERSION_REMOTE=$(jq --raw-output '.packages[0] .platforms[0] .version' "$INDEX_JSON_FILE")
 	# .platforms[0] should be always the latest arduino-sophgo info element
-	if _vercmp g "$ARDUINO_VERSION" "$ARDUINO_VERSION_REMOTE"; then
+	# if _vercmp g "$ARDUINO_VERSION" "$ARDUINO_VERSION_REMOTE"; then
 		new_platform_item() {
 			local platform_json
 			platform_json="$(generate_current_platform_json)"
@@ -286,9 +286,9 @@ else
 		}
 		new_platform_item
 		ARDUINO_VERSION_UPDATED=1
-	else
-		echo "arduino-sophgo: no new version, skip updating the corresponding array of the index json file"
-	fi
+	# else
+	# 	echo "arduino-sophgo: no new version, skip updating the corresponding array of the index json file"
+	# fi
 
 	# update tools
 	update_tools_deps() {
