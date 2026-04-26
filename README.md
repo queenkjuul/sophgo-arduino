@@ -2,6 +2,26 @@
 
 This repo is a submodule of [my project to bring mainline Linux 7.0 to Ubuntu 24.04 on Duo boards](github.com/queenkjuul/milkv-duo-ubuntu). This module houses the Arduino Board Support Package (BSP) needed to upload Arduino firmware to my custom images. My Ubuntu images default to USB Ethernet mode, not USB Serial mode like the Milk-V arduino images. So I wrote a little client/server setup for uploading Arduino sketches over the network instead. The client side of that is `uploadtool`, which is hosted here in the `tools` directory. The server side is the `milkv-arduino` package in [the main monorepo](github.com/queenkjuul/milkv-duo-ubuntu). 
 
+## Instructions
+
+1. You need to be running one of my [custom Ubuntu 24.04 images](https://github.com/queenkjuul/milkv-duo-ubuntu), or at least running the `mdaud` daemon from that repo on your Duo.
+2. Your Duo needs to be set up to advertise itself as an Arduino firmware target using mDNS/Avahi/Zeroconf. My Ubuntu images are pre-configured for this; you can copy the Avahi config files from the `milkv-arduino` directory of that repo.
+3. Download and install the Arduino IDE
+4. Go to File > Preferences
+5. Paste this URL into the "Additional boards manager URLs" box: `https://github.com/queenkjuul/sophgo-arduino/releases/download/v0.2.9-qkj/package_sg200x_index.json`
+   <img width="1524" height="1039" alt="image" src="https://github.com/user-attachments/assets/7e10fa13-fee0-4fde-a25c-169a79f012d6" />
+6. Go to Tools > Boards > Board Manager, search for "sg" and click "install" on the "SG200X by Sophgo" package, with the "0.2.9-qkj" version number
+   <img width="742" height="581" alt="image" src="https://github.com/user-attachments/assets/4a88376a-4b5a-4446-a0ab-30853205c8da" />
+7. From the "Select Board" dropdown, locate the IP address of your Duo and select it
+   <img width="801" height="744" alt="image" src="https://github.com/user-attachments/assets/d68c5a39-3cc4-4b5a-86a2-2e046f9d20ae" />
+8. Search for "duo" in the Boards search box and select your variant
+   <img width="1546" height="1161" alt="image" src="https://github.com/user-attachments/assets/c106a33f-efdb-49ad-b0d0-b688ca3550dd" />
+9. Go to File > Examples > Basics > Blink
+10. Click the Upload button (the -> arrow in the upper left)
+11. If your Duo is running `mdaud` and has its kernel configured correctly (again, all pre-set on my Ubuntu images) then you should see your LED blink!
+
+
+
 Below is the original Chinese documentation from the upstream project.
 
 # arduino-sg200x
