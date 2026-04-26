@@ -69,6 +69,8 @@ jobs:
         mv $GITHUB_WORKSPACE/../$INDEX_JSON_FILE_NAME $GITHUB_WORKSPACE/
         mv $GITHUB_WORKSPACE/../burntool.tar.gz $GITHUB_WORKSPACE/
         mv $GITHUB_WORKSPACE/../burntool.zip $GITHUB_WORKSPACE/
+        mv $GITHUB_WORKSPACE/../uploadtool.tar.gz $GITHUB_WORKSPACE/
+        mv $GITHUB_WORKSPACE/../uploadtool.zip $GITHUB_WORKSPACE/
 
     - name: Build Doc
       run: |
@@ -93,4 +95,6 @@ jobs:
           ${{ steps.package-build.outputs.index_json_file_name }}
           burntool.tar.gz
           burntool.zip
+          uploadtool.tar.gz
+          uploadtool.zip
           docs_html.tar.gz
