@@ -1,4 +1,4 @@
-# `sophgo-arduino` for queenkjuul's custom Mainline Linux + Ubuntu 24.04 SD images
+# `sophgo-arduino` for queenkjuul's custom Milk-V Duo Linux images (Ubuntu + Alpine)
 
 This repo is a submodule of [my project to bring mainline Linux 7.0 to Ubuntu 24.04 on Duo boards](github.com/queenkjuul/milkv-duo-ubuntu). This module houses the Arduino Board Support Package (BSP) needed to upload Arduino firmware to my custom images. My Ubuntu images default to USB Ethernet mode, not USB Serial mode like the Milk-V arduino images. So I wrote a little client/server setup for uploading Arduino sketches over the network instead. The client side of that is `uploadtool`, which is hosted here in the `tools` directory. The server side is the `milkv-arduino` package in [the main monorepo](github.com/queenkjuul/milkv-duo-ubuntu). 
 
